@@ -56,7 +56,7 @@ function App() {
       setResult("Loading...");
 
       const res = await fetch(
-        "https://ai-flow-backend-lziz.onrender.com/api/ask-ai",
+        " https://flow-ai-1-7ovn.onrender.com/api/ask-ai",
         {
           method: "POST",
           headers: {
@@ -83,16 +83,13 @@ function App() {
         return;
       }
 
-      const res = await fetch(
-        "https://ai-flow-backend-lziz.onrender.com/api/save",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ prompt, result }),
+      const res = await fetch(" https://flow-ai-1-7ovn.onrender.com/api/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({ prompt, result }),
+      });
 
       const data = await res.json();
 
